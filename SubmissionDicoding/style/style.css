@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Inconsolata&family=Quicksand:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Styling pada Header */
+
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2296d3;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-container .logo img {
+    width: 150px;
+}
+
+/* Membuat tautan navigasi menggunakan flexbox */
+
+.navbar-container .nav-list ul {
+    /* Membuat flex container, sehingga seluruh element li menjadi flex-items*/
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem; /* vertikal & horizontal */
+}
+
+.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 500px;
+    transition: all .2s ease-in-out;
+}
+
+.navbar-container .nav-list li:hover a {
+    background-color: white;
+    color: #2296d3;
+}
+
+
+
+
+.page {
+    max-width: 1150px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 10rem;
+    flex: 1;
+
+    /* menerapkan flexbox agar konten utama berada di tengah secara vertikal */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.page-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-image img {
+    width: 350px;
+    min-width: 250px;
+    border-radius: 200px;
+}
+
+.page-description {
+    flex: 1 1;
+}
+
+.page-description .title {
+    font-size: 3.5rem;
+    margin-block: 1rem;
+}
+
+.page-description p {
+font-size: 1.2rem;
+margin-block-start: 2.5rem;
+text-align: justify;
+line-height: 2rem;
+}    
+
+
+/* Styling main */
+
+main {
+    padding: 20px;
+    font-size: 17px;
+    line-height: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    flex: 5;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.card {
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 50px 60px;
+    margin: 10px 35px;
+    border-radius: 5px;
+    text-align: justify;
+    line-height: 30px;
+    position: relative;
+}
+
+.card h2 {
+    margin-bottom: 30px;
+}
+
+main .content .card .imgSlide {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-block: 2.5rem;
+}
+
+main .content .card .imgSlide .ghibli-image {
+    width: 45%;
+    max-height: 280px;
+    border-radius: 15px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* Slideshow container */
+#animasi {
+    position: relative;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 20px;
+    color: #2296d3;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: #2296d3;
+    color: white;
+ }
+
+ /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+.active, .dot:hover {
+    background-color: #2296d3;
+  }
+
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+.profile {
+    flex: 1;
+    height: fit-content;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile img {
+    width: 200px;
+}
+
+.profile-picture {
+    display: flex;
+    max-height: 200px;
+    margin: 20px;
+    border-radius: 30px;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.foot-note {
+    width: 100%;
+    margin-top: 50px;
+    padding: 5rem 3rem;
+    flex: 1;
+    background-color: #2296d3;
+}
+
+.footer-page {
+    width: 100%;
+    padding: 2rem 5rem;
+    color: white;
+    line-height: 35px;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem 10rem;
+}
+
+.sumber, .contact {
+    margin-bottom: 30px;
+
+}
+.sumber h2 {
+    margin-bottom: 25px;
+}
+.sumber li {
+    list-style-type: none;
+}
+.sumber li a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact h2 {
+    margin-bottom: 25px;
+}
+.contact li {
+    list-style-type: none;
+}
+.contact li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Medium device (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+       flex-direction: column; 
+    }
+
+    .nav-list {
+        margin-block: 20px;
+    }
+
+    .navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+    }
+
+    .page, .container {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 70px;
+    }
+
+    .page-description .title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .page-description p {
+        font-size: 1rem;
+    }
+    .page-image {
+        order: -1;
+        width: 50px;
+        justify-content: center;
+    }
+
+}
+
+/*
+Student's note: Javascript
+
+Terdapat Javascript dalam project aplikasi ini, yaitu dalam bentuk slider.
+Slider saya tempatkan pada element article dengan class: card setelah article animasi studio ghibli terbaik (line: 254)
+Slider ini berisi beberapa content animasi dari studio ghibli dengan foto dan deskripsi.
+
+Cara mengakses:
+- menerapkan element script di dalam index.html
+- element script diletakan tepat setelah element article yang berisi beberapa section content untuk slider
+- Setiap section diberi class="imageSlider fade"
+- dalam script buat function showSlides(n) 
+- class imageSlider dipanggil di dalam script dengan getElementsByClassName dalam variable let slides (line: 278)
+- membuat logic slider dalam function showSlides(n)
+- membuat beberapa function tambahan untuk menunjang slider, seperti next dan prev untuk tombol slides dan dot sebagai simbol agar user dapat melihat sedang dalam slides ke berapa.
+- membuat css untuk slider
+
+*/
