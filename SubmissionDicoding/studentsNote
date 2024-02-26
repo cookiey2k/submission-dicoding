@@ -1,0 +1,16 @@
+Student's note: Javascript
+
+Terdapat Javascript dalam project aplikasi ini, yaitu dalam bentuk slider.
+Slider saya tempatkan pada element article dengan class: card setelah article animasi studio ghibli terbaik (line: 254)
+Slider ini berisi beberapa content animasi dari studio ghibli dengan foto dan deskripsi.
+
+Cara mengakses:
+
+- menerapkan element script di dalam index.html
+- element script diletakan tepat setelah element article yang berisi beberapa section content untuk slider
+- Setiap section diberi class="imageSlider fade"
+- dalam script buat function showSlides(n)
+- class imageSlider dipanggil di dalam script dengan getElementsByClassName dalam variable let slides (line: 278)
+- membuat logic slider dalam function showSlides(n)
+- membuat beberapa function tambahan untuk menunjang slider, seperti next dan prev untuk tombol slides dan dot sebagai simbol agar user dapat melihat sedang dalam slides ke berapa.
+- membuat css untuk slider
